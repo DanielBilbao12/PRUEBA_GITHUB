@@ -1,0 +1,473 @@
+
+USUARIO@Casa MINGW64 ~
+$ cd /D/USUARIO/Desktop
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop
+$ cd PRUEBA_GITHUB
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB
+$ git init
+Initialized empty Git repository in D:/USUARIO/Desktop/PRUEBA_GITHUB/.git/
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Texto.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git add Texto.txt
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Texto.txt
+
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Texto.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Texto2.txt
+
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git add Texto2
+fatal: pathspec 'Texto2' did not match any files
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Texto.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Texto2.txt
+
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git add Texto2.txt
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Texto.txt
+        new file:   Texto2.txt
+
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git commit
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'USUARIO@Casa.(none)')
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git config --global user.email "bilbaod12@gmail.com"
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git config --global user.email "Daniel Bilbao"
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Texto.txt
+        new file:   Texto2.txt
+
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git commit
+[master (root-commit) 366b1f6] Mi primer commit
+ 2 files changed, 1 insertion(+)
+ create mode 100644 Texto.txt
+ create mode 100644 Texto2.txt
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git log
+commit 366b1f6670225381854a2ec91855cbaaebd62a17 (HEAD -> master)
+Author: Daniel Bilbao <Daniel Bilbao>
+Date:   Fri Jun 12 17:37:40 2020 +0200
+
+    Mi primer commit
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Texto.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git checkout -- Texto.txt
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Texto.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git diff Texto.txt
+diff --git a/Texto.txt b/Texto.txt
+index ade1f58..860bed4 100644
+--- a/Texto.txt
++++ b/Texto.txt
+@@ -1 +1,3 @@
+-Hola Mundo
+\ No newline at end of file
++Hola Mundo
++
++1. Otro cambio
+\ No newline at end of file
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Texto.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git add Texto.txt
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Texto.txt
+
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git commit
+[master 15a2760] Ahora el Texto.txt tiene "1. Otro cambio"
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git log
+commit 15a27609aaf52274e6d2ba681433f3b639fdc49d (HEAD -> master)
+Author: Daniel Bilbao <Daniel Bilbao>
+Date:   Fri Jun 12 17:46:42 2020 +0200
+
+    Ahora el Texto.txt tiene "1. Otro cambio"
+
+commit 366b1f6670225381854a2ec91855cbaaebd62a17
+Author: Daniel Bilbao <Daniel Bilbao>
+Date:   Fri Jun 12 17:37:40 2020 +0200
+
+    Mi primer commit
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        CualquierArchivo/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git status
+warning: unable to access '.gitignore': Permission denied
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore/
+        CualquierArchivo/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git add .gitignore
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ get status
+bash: get: command not found
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Archivoquenoquiero.txt
+
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git add .gitignore
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git commit -m "He agregado un gitignore(Pongo el -m para no entrar al editor ese)"[master fdc0d72] He agregado un gitignore(Pongo el -m para no entrar al editor ese)
+ 1 file changed, 3 insertions(+)
+ create mode 100644 .gitignore
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git branch
+* master
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git branch login
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git branch
+  login
+* master
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git checkout login
+Switched to branch 'login'
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (login)
+$ git branch
+* login
+  master
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (login)
+$ git status
+On branch login
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        LOGIN.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (login)
+$ git status
+On branch login
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        LOGIN.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (login)
+$ git status
+On branch login
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        LOGIN.txt
+        Login/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (login)
+$ git add .
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (login)
+$ git status
+On branch login
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   LOGIN.txt
+        new file:   Login/CualquierArchivo2.txt
+
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (login)
+$ git commit -m "Cambios en Login"
+[login 120918e] Cambios en Login
+ 2 files changed, 1 insertion(+)
+ create mode 100644 LOGIN.txt
+ create mode 100644 Login/CualquierArchivo2.txt
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (login)
+$ git log
+commit 120918e796c3711c455b5356c01ca42f23b51deb (HEAD -> login)
+Author: Daniel Bilbao <Daniel Bilbao>
+Date:   Fri Jun 12 18:08:14 2020 +0200
+
+    Cambios en Login
+
+commit fdc0d72b09e6d2f5317a75abefccf958da73eff2 (master)
+Author: Daniel Bilbao <Daniel Bilbao>
+Date:   Fri Jun 12 18:03:07 2020 +0200
+
+    He agregado un gitignore(Pongo el -m para no entrar al editor ese)
+
+commit 15a27609aaf52274e6d2ba681433f3b639fdc49d
+Author: Daniel Bilbao <Daniel Bilbao>
+Date:   Fri Jun 12 17:46:42 2020 +0200
+
+    Ahora el Texto.txt tiene "1. Otro cambio"
+
+commit 366b1f6670225381854a2ec91855cbaaebd62a17
+Author: Daniel Bilbao <Daniel Bilbao>
+Date:   Fri Jun 12 17:37:40 2020 +0200
+
+    Mi primer commit
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (login)
+$ git branch
+* login
+  master
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (login)
+$ git checkout master
+Switched to branch 'master'
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git log
+commit fdc0d72b09e6d2f5317a75abefccf958da73eff2 (HEAD -> master)
+Author: Daniel Bilbao <Daniel Bilbao>
+Date:   Fri Jun 12 18:03:07 2020 +0200
+
+    He agregado un gitignore(Pongo el -m para no entrar al editor ese)
+
+commit 15a27609aaf52274e6d2ba681433f3b639fdc49d
+Author: Daniel Bilbao <Daniel Bilbao>
+Date:   Fri Jun 12 17:46:42 2020 +0200
+
+    Ahora el Texto.txt tiene "1. Otro cambio"
+
+commit 366b1f6670225381854a2ec91855cbaaebd62a17
+Author: Daniel Bilbao <Daniel Bilbao>
+Date:   Fri Jun 12 17:37:40 2020 +0200
+
+    Mi primer commit
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git remote add origin https://github.com/DanielBilbao12/PRUEBA_GITHUB.git
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$ git push -u origin master
+
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (10/10), 872 bytes | 436.00 KiB/s, done.
+Total 10 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/DanielBilbao12/PRUEBA_GITHUB.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$
+
+USUARIO@Casa MINGW64 /D/USUARIO/Desktop/PRUEBA_GITHUB (master)
+$
