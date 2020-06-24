@@ -7,5 +7,14 @@ sexo= str(input("Introduzca su sexo (Hombre o Mujer): "))
 while sexo.upper()!= "HOMBRE" and sexo.upper()!= "MUJER" :
     print("ERROR!")
     sexo= str(input("Introduzca su sexo (Hombre o Mujer): "))
-#********************GRUPO A***********************
-if 
+if sexo.upper() == "M" :
+    if nombre.lower() < "m" : # De esta manera se compara el primer digito del nombre con la letra m
+        grupo: "A"
+    else :
+        grupo: "B"
+else :
+    if nombre.lower() >"n": # De esta manera se compara el primer digito del nombre con la letra n
+        grupo= "A"
+    else :
+        grupo= "B"
+print("Usted pertenece al grupo ", str(grupo))
