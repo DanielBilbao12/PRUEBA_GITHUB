@@ -6,4 +6,4 @@ while numero<0 :
     print("ERROR. Numero negativo")
     numero= int(input("Introduzca un numero entero positivo: \n"))
 for i in range(numero+1) :
-    print(numero-i,end=",")
+    print(numero-i,end=",") 
