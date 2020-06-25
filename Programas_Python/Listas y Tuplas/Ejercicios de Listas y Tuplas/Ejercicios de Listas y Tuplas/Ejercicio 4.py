@@ -2,9 +2,9 @@
 #los almacene en una lista y los muestre por pantalla ordenados de menor a mayor
 
 lista=[]
-cantidad=str(input("Introduce la cantidad de numero de loteria que desea ordenar de mayor a menor: "))
+cantidad=str(input("Introduce la cantidad de numeros de loteria que desea ordenar de menor a mayor: "))
 while not cantidad.isnumeric() :
-    print("ERROR. La cantidad de numero de loteria tiene que ser un numero entero positivo!")
+    print("ERROR. La cantidad de numeros de loteria tiene que ser un numero entero positivo!")
     cantidad=str(input("Introduce la cantidad de numero de loteria que desea ordenar de mayor a menor: "))
 for i in range(int(cantidad)) :
     lista.append(int(input("Introduce el "+str(i+1)+". numero de la loteria primitiva: ")))
