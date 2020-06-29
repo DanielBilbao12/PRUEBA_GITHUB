@@ -6,7 +6,7 @@ asignaturas= ["Matematicas", "Fisica", "Quimica", "Historia", "Informatica"]
 notas=[]
 for i in asignaturas :
     nota=str(input("Introduzca la nota de "+i+":"))
-    while not nota.isnumeric() and (float(nota) <0.0 or float(nota)>10.0): #ERROR AQUI
+    while not nota.isnumeric() and (float(nota) <0.0 or float(nota)>10.0): #ERROR AQUI, si meto un string me jode.
         print("ERROR. la nota tiene que ser un valor numerico positivo entre 0 y 10!")
         nota=str(input("Introduzca la nota de "+i+":"))
     notas.append(float(nota))

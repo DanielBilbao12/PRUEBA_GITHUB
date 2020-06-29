@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>f55f19bf-74f9-48bd-8bdf-ce74a959b448</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Ejercicio 6.py</StartupFile>
+    <StartupFile>Ejercicio 11.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Ejercicio 1.py" />
+    <Compile Include="Ejercicio 10.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ejercicio 11.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ejercicio 12.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Ejercicio 2.py">
       <SubType>Code</SubType>
     </Compile>
@@ -35,6 +44,15 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Ejercicio 6.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ejercicio 7.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ejercicio 8.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ejercicio 9.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
