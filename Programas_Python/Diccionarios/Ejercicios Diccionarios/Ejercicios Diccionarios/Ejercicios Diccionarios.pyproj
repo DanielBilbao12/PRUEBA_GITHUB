@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>bf340ceb-7f61-4692-944d-5c1dfce15627</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Ejercicios_Diccionarios.py</StartupFile>
+    <StartupFile>Ejercicio 3.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Ejercicios_Diccionarios.py" />
+    <Compile Include="Ejercicio 1.py" />
+    <Compile Include="Ejercicio 2.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ejercicio 3.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
