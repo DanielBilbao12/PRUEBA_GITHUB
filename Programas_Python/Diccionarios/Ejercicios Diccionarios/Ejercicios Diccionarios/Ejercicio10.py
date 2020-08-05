@@ -22,10 +22,7 @@ print("*4- Mostrar todos los clientes  *")
 print("*5- Mostrar clientes preferentes*")
 print("*6- Salir                       *")
 print("*********************************")
-menu=str(input("Que operacion desea realizar?"))
-while not menu.isnumeric():
-    print("ERROR. INTRODUZCA UN NUMERO DEL 1 AL 6!")
-    menu=str(input("Que operacion desea realizar?"))
+menu=0
 while menu!=6 :
     if menu==1:
         dni=str(input("Introduce el dni del cliente:"))
@@ -62,11 +59,18 @@ while menu!=6 :
     elif menu==3:
         dni=str(input("Introduce el dni del cliente:"))
         if dni in clientes:
-            ###################POR AKI#######################
+            print("Los datos del cliente con DNI: ",str(dni))
+            for clave, valor in clientes[dni].items() :
+                print(clave.title()+":",valor)
         else:
             print("No hay ningun cliente con ese DNI")
     elif menu==4:
+        print("La lista de los clientes es la siguiente:")
+        for clave, valor in clientes.items() :
+            print(clave, valor["Nombre"])
     elif menu==5:
-
-clientes[dni]=datos
-print(clientes)
+        print("La lista de los clientes preferentes: ")
+        for clave, valor in clientes.items() :
+            if valor["Preferente"] :
+                print(clave, valor["Nombre"])
+    menu=int(input("Que operacion desea realizar?"))
