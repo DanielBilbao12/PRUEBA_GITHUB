@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e6e789aa-5b44-4150-948b-10d08951fc8c</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Ejercicio 8.py</StartupFile>
+    <StartupFile>Ejercicio10.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -41,6 +41,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Ejercicio 8.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ejercicio 9.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ejercicio10.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
