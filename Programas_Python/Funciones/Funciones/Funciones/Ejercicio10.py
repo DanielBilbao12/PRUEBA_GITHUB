@@ -1,20 +1,33 @@
-
 #Escribir una función que convierta un número decimal en binario y otra que convierta un número binario en decimal.
 
-def ConversioBinaria (numero):
-    """Funcion que convierte un valor decimal en binario
+
+def ConversionBinaria (numero):
+    """Funcion que convierne un valor entero en binario
     Parametros:
         -numero: Numero entero
     Return:
-    Valor en binario
+    Valor binario
     """
-    restos=[]
-    aux=numero
-    while aux//2 != 1 :
-        restos.append(aux%2)
-        aux//=2
-    restos.append(0)
-    restos.append(1)
-    restos.reverse()
-    return restos
-print(ConversioBinaria(2))
+    binario=[]
+    while numero>0 :
+        binario.append(str(numero%2))
+        numero//=2
+    binario.reverse()
+    return "".join(binario)
+
+def ConversionDecimal (numero):
+    """Funcion que convierte un valor binario en decimal
+    Parametros:
+        -numero: Numro expresado en base 2
+    Return:
+    Valor decimal
+    """
+    numero=list(numero)
+    numero.reverse()
+    decimal=0
+    for i in range(len(numero)):
+        decimal += int(numero[i])*2**i
+    return decimal
+
+print(ConversionBinaria(3))
+print(ConversionDecimal("11"))
